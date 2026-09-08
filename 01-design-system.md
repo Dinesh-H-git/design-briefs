@@ -1,11 +1,15 @@
 # Design system — component brief
 
-The component library the Workflows prototype is built from. Every component
-listed here exists in Storybook today; the values are taken from the code, not
-from memory.
+> **Foundation — shared by every feature.** Nothing here is Workflows';
+> a second feature reuses this file unchanged.
 
-Read this first, then `02-workflows-app.md`, which composes screens **out of
-these components** rather than inventing new ones.
+The component library every feature is built from — not Workflows'. Every
+component listed here exists in Storybook today; the values are taken from the
+code, not from memory.
+
+Read this first, then `02-layout.md` for how much room things take, then
+`03-workflows.md`, which composes screens **out of these components** rather
+than inventing new ones.
 
 **Design in Mulish, render in Roboto.** The Figma source is set in Mulish; the
 app renders Roboto at the same sizes and weights. Sizes below are the rendered

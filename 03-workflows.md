@@ -1,12 +1,15 @@
 # Workflows — feature brief
 
+> **Feature brief — Workflows only.** The two foundation briefs above are
+> shared; this one is not. A second feature gets its own file beside this.
+
 The feature to design. Workflows is one feature of an incident-response
 product, not the product — it automates what happens to an incident, and the
 chrome around it (the rail, the top bar, the account) belongs to the product it
 sits in.
 
-**Read `01-design-system.md` first**: every screen here is assembled from
-components in that file. Where this brief names a component in `code font`, use
+**Read `01-design-system.md` and `02-layout.md` first**: every screen here is
+assembled from components in the one and sized by the other. Where this brief names a component in `code font`, use
 the one that already exists rather than drawing a new one.
 
 New components are a last resort. If a screen seems to need one, say so
@@ -99,7 +102,7 @@ Columns are **hideable and reorderable** through a customize control
 
 ### 2.2 Workflow details — `/workflows/:id`
 
-**An instance of the details template — `03` §2.1.** The two cards, the
+**An instance of the details template — `02` §2.1.** The two cards, the
 breadcrumb-title-description-tags header, the metadata row and the pinned tab
 bar are the template's and are the same on every feature's details page. What
 follows is only what Workflows puts in the slots.
@@ -156,7 +159,7 @@ configure nothing.
 
 ### 2.3 Workflow editor — `/workflows/new`, `/workflows/:id/edit`
 
-**An instance of the editor template — `03` §2.2.** Every edit flow is the same
+**An instance of the editor template — `02` §2.2.** Every edit flow is the same
 two segments: the thing being edited on the left, Help and Guide fixed at 402px
 on the right, and a pinned save bar. **Section 1 below is the template's** —
 title, description, owner and tags are what every feature edits about a record.

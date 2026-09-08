@@ -1,8 +1,11 @@
 # Layout and space — foundation brief
 
-The third of three. `01-design-system.md` says what things look like,
-`02-workflows-app.md` says what the screens are; this says **how much room
-everything takes and how it is arranged**.
+> **Foundation — shared by every feature.** Nothing here is Workflows';
+> a second feature reuses this file unchanged.
+
+The second of two foundations. `01-design-system.md` says what things look
+like; this says **how much room everything takes and how it is arranged**.
+`03-workflows.md` then puts one feature into the shapes named here.
 
 It exists because the theme does not answer that question. Tokens are defined
 for colour, radii, border widths, shadows, font sizes and weights, text styles
@@ -397,4 +400,4 @@ viewport that is **1231px** with the rail expanded, **1386px** collapsed.
 >
 > If every column should be visible at 1470px without panning, that is a
 > **column-width decision** — roughly 330px has to come out of the set — and it
-> belongs in `02` §2.1, not here.
+> belongs in `03` §2.1, not here.

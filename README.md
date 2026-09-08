@@ -1,23 +1,36 @@
 # design-brief
 
-Three markdown briefs written to be **fed to a design tool**, in this order:
+Markdown briefs written to be **fed to a design tool**, and read in order.
 
-1. **`01-design-system.md`** — the component library. Foundations (colour in
-   both modes, type scale, radii, borders, elevation, iconography) and every
-   component that exists in Storybook today, with its anatomy, sizes and
-   states.
-2. **`02-workflows-app.md`** — the feature. What a workflow is, then each
-   screen described as an assembly of the components in (1), plus the
-   behaviour and the states each screen has to cover.
-3. **`03-layout.md`** — how much room everything takes: the page skeleton,
-   the **two page templates** every feature's details and edit screens are
-   built from, the spacing grid, the density constants, which region scrolls,
-   stacking, motion. It is separate because the theme defines **no** spacing, sizing,
-   breakpoint or z-index tokens — those values live as raw pixels inside
-   components, and without them collected a design will invent a second set.
+**Two of them are shared; one is not.** The split is the point, and the
+numbering carries it — the foundations come first because a feature is
+assembled out of them.
 
-The second names components from the first in `code font`. That is deliberate:
-the point of the pair is that the app is designed **out of the system**, not
+### Foundations — every feature reuses these unchanged
+
+1. **`01-design-system.md`** — the component library. Colour in both modes,
+   type scale, radii, borders, elevation, iconography, and every component that
+   exists in Storybook today with its anatomy, sizes and states.
+2. **`02-layout.md`** — how much room everything takes: the page skeleton, the
+   **two page templates** every feature's details and edit screens are built
+   from, the spacing grid, the density constants, which region scrolls,
+   stacking, motion. It is a separate file because the theme defines **no**
+   spacing, sizing, breakpoint or z-index tokens — those live as raw pixels
+   inside components, and without them collected a design invents a second set.
+
+### The feature
+
+3. **`03-workflows.md`** — Workflows, one feature of an incident-response
+   product. What a workflow is, then each screen as an assembly of the
+   components in (1), sized by the rules in (2), plus the behaviour and states
+   each screen has to cover.
+
+A second feature adds `04-<name>.md` beside the third and touches neither
+foundation. If it needs something the foundations do not have, that is a change
+to a foundation, made once — not a paragraph in a feature brief.
+
+The feature brief names components from the first in `code font`. That is
+deliberate: the point is that a screen is designed **out of the system**, not
 alongside it. If a screen appears to need something new, the brief asks for it
 to be called out rather than quietly drawn.
 
@@ -26,14 +39,14 @@ to be called out rather than quietly drawn.
 Read out of the code, not from memory: token values from `app/src/theme/`, the
 component list from the Storybook stories, dimensions from the components
 themselves. Where a design node exists it is cited; where the current UI was
-inferred rather than specified, `02` says so — §4 of that file is the list of
+inferred rather than specified, `03` says so — §4 of that file is the list of
 what has no design yet, which is the most useful place to start.
 
 ## Keeping them true
 
 They describe the app as of the last commit that touched them. The parts most
-likely to go stale first are the component inventory in `01` §2–§7, the column
-tables in `02` §2, and the spacing values in `03` §3. All are cheap to
+likely to go stale first are the component inventory in `01` §2–§7, the spacing
+values in `02` §3, and the column tables in `03` §2. All are cheap to
 re-derive:
 
 ```bash
