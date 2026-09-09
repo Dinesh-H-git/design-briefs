@@ -35,8 +35,8 @@ does not have to invent a second set.
 
 | Region | Size | Notes |
 |---|---|---|
-| Left rail, collapsed | **52px** | derived — a 16px inset either side of a 20px icon |
-| Left rail, expanded | **207px** | the label fades in over 0.075s, half the rail's own transition |
+| Navigation rail, collapsed | **52px** | derived — a 16px inset either side of a 20px icon |
+| Navigation rail, expanded | **207px** | the label fades in over 0.075s, half the rail's own transition |
 | Rail item inset | 16px | |
 | Top bar | content + 8px vertical padding, `thick` (2px) bottom border | its divider rule is 34px tall |
 | Page gutter | **16px** left, right and top | **no bottom gutter** on the details page — the body card bleeds to the bottom edge |

@@ -114,7 +114,7 @@ labels, card titles, section headings · `sm` breadcrumbs and tooltips ·
   chip**), `controlLg 4px` (32px icon buttons and the bars they sit in — top-bar
   controls, the table footer, a toast, an editor section), `panel 8px` (the
   trigger / condition / action cards). Circles use `full`. One-offs stay inline:
-  the checkbox box (2px at `md`, 1.5px at `sm`), the sidebar logo tile at 16px.
+  the checkbox box (2px at `md`, 1.5px at `sm`), the rail's logo tile at 16px.
 - **Borders** — `hairline 0.75px` (tag pill stroke), `base 1px` (everything),
   `focus 1.5px`, `thick 2px`.
 - **Focus** — the field's own border changes to `focus` **and keeps its width**;
@@ -244,10 +244,18 @@ only the columns differ.**
 
 ## 7. Chrome
 
-- **Shell** — left rail, **52px collapsed / 207px expanded**, 0.15s transition.
-  Rail items are a 20px icon at a 16px inset plus a label that fades. Brand
+- **Shell** — the frame: navigation rail, top bar and the content slot between
+  them. The **navigation rail** is **52px collapsed / 207px expanded**, 0.15s
+  transition. Rail items are a 20px icon at a 16px inset plus a label that
+  fades. A row that leads nowhere in this build is not a button: it takes
+  `not-allowed` and a tooltip saying why. Brand
   tile and account at the top, product logo and a collapse control at the
   bottom. The selected item carries a rounded active marker.
+  > The rail's surface token is still named `chrome.bg.sidebar`, and the darker
+  > band on the details page uses it too. The token name is older than the
+  > vocabulary and renaming it would reach into the Figma variable set, so it is
+  > left alone — worth knowing so the name is not read as a second thing.
+
 - **TopBar** — team picker, search, theme toggle, on-call summary, avatar.
 - **PageHeader** — title, description, primary action.
 - **ListingCountBar** — "N Workflows." plus filter/search controls.
