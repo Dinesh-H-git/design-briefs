@@ -86,11 +86,16 @@ Design hover states as *the contrasting surface*, not as a specific grey.
 carried by size and weight alone. The only other family the app names anywhere
 is the generic `monospace` keyword, for inline code and the JSON editor.
 
+**Whole pixels.** The ramp was 10.5 / 12.5 / 14.5 — the design's own values, and
+half a pixel is not a size a screen can draw. Rounded to nearest, ties down:
+rounding up would put `sm` at 15 against `lg`'s 16, and two steps a pixel apart
+is not a scale.
+
 | Style | Size | Line height | Weight |
 |---|---|---|---|
-| `xs` | 10.5px | 1 | 400 |
-| `sm` | 12.5px | 1 | 400 |
-| `md` | 14.5px | 1.5 | 400 |
+| `xs` | 10px | 1 | 400 |
+| `sm` | 12px | 1 | 400 |
+| `md` | 14px | 1.5 | 400 |
 | `lg` | 16px | 1.5 | 400 |
 | `xl` | 20px | 1.5 | 400 |
 | `3xl` | 27px | 1.5 | 400 |
@@ -194,7 +199,7 @@ pressed control never shows its hover colour.
 
 | Component | Spec |
 |---|---|
-| **Tooltip** | `bg.tooltip` surface, white 12.5px/1.5 centred text, 3px radius, 8px padding, arrow that flips to the available side. **No shadow.** 200ms open delay, closes immediately |
+| **Tooltip** | `bg.tooltip` surface, white 12px/1.5 centred text, 3px radius, 8px padding, arrow that flips to the available side. **No shadow.** 200ms open delay, closes immediately |
 | **Toast** | 782px wide (capped to the viewport), min 54px tall, `controlLg` radius, `semantic.*.subtle` fill on a 1px `semantic.*` border, **no shadow**. 30px circular mark (a disc with the glyph knocked out), message at `lg`, ghost close button at the trailing edge. Enters from the **top centre**, max 3 stacked, 12px apart, 5s each |
 | **ConfirmDialog** | modal: title, sentence naming the thing, destructive confirm + cancel |
 | **DiscardChangesDialog** | modal asking before abandoning edits |
