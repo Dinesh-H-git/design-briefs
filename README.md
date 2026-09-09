@@ -67,6 +67,20 @@ There is also no raw palette worth publishing. The system is two-tier —
 primitives, then semantics — and a design should only ever use the semantic
 layer. Naming the primitives would invite reaching past it.
 
+## Publishing
+
+This repository is private; the briefs are not. They are mirrored to a public
+repo so the raw markdown can be linked, and the mirror is made by script rather
+than by hand — it drifted four commits once, while the type scale changed
+underneath it.
+
+```bash
+./design-brief/publish.sh "what changed"
+```
+
+Run it whenever a brief changes. It mirrors exactly, so a renamed file does not
+survive in the mirror as a second copy.
+
 ## Not vault notes
 
 These live in the repo, not in the Obsidian vault, so they carry no frontmatter
